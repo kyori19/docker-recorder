@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  epgstation:
+    build: 
+      context: .
+      dockerfile: epgstation/Dockerfile
+    image: kyori/epgstation
