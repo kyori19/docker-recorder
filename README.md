@@ -1,12 +1,12 @@
 # docker-recorder
-Dockerfile for EPGStation + FFmpeg
+
+Dockerfile for EPGStation + FFmpeg + JoinLogoScpTrialSet
 
 ## イメージについて
 
 このイメージは、ベースとなっているEPGStationやFFmpegのイメージに更新があるたびに自動でビルドされます。
 その影響で、latestタグのみしか提供することが出来ません。
 latestタグの更新はDocker Hub次第です。
-
 
 ## 動作環境
 
@@ -20,7 +20,6 @@ latestタグの更新はDocker Hub次第です。
 * Ubuntu Server 20.04.2 (on ESXi 6.7)
 * Docker CE 20.10.5
 * docker-compose 1.28.4
-
 
 ## docker-compose.ymlについて
 
