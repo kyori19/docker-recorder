@@ -66,3 +66,7 @@ RUN cd /opt/jlse &&\
   yarn --production --pure-lockfile &&\
   ln -s /opt/jlse/src/jlse.js /usr/local/bin/jlse &&\
   jlse --help
+
+# Patch env issue
+RUN sed -i "s/PATH:\sprocess\.env\['PATH'\]/...process.env/g" /app/src/model/service/encode/EncodeManageModel.ts &&\
+  npm run build
