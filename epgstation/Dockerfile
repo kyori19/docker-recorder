@@ -1,4 +1,4 @@
-  FROM kyori/ffmpeg:latest as ffmpeg
+FROM kyori/ffmpeg:latest as ffmpeg
 FROM kyori/avisynthplus-alpine:latest as avisynthplus
 
 FROM alpine:3.13.2 as build
