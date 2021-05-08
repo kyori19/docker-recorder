@@ -24,7 +24,7 @@ RUN apk add --no-cache ${DEV_PKGS} &&\
   # Boost
   mkdir -p /tmp/boost &&\
   cd /tmp/boost &&\
-  curl -sL https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz | tar -xz --strip-components=1 &&\
+  curl -sL https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75_0.tar.gz | tar -xz --strip-components=1 &&\
   ./bootstrap.sh --with-libraries=filesystem,program_options,system &&\
   ./b2 install &&\
   # JoinLogoScpTrialSetLinux
