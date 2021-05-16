@@ -1,0 +1,12 @@
+diff --git a/src/model/service/socketio/SocketIOManageModel.ts b/src/model/service/socketio/SocketIOManageModel.ts
+index ae82ab64..29b8237f 100644
+--- a/src/model/service/socketio/SocketIOManageModel.ts
++++ b/src/model/service/socketio/SocketIOManageModel.ts
+@@ -36,6 +36,7 @@ export default class SocketIOManageModel implements ISocketIOManageModel {
+                     cors: {
+                         origin: '*',
+                     },
++                    allowEIO3: true,
+                 }),
+             );
+         }

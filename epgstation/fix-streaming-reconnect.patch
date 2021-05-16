@@ -1,0 +1,19 @@
+diff --git a/client/src/views/AppContent.vue b/client/src/views/AppContent.vue
+index 40ba8df1..3011c672 100644
+--- a/client/src/views/AppContent.vue
++++ b/client/src/views/AppContent.vue
+@@ -95,6 +95,14 @@ export default class AppContent extends Vue {
+ 
+         // reload
+         const fullPath = this.$route.fullPath;
++        if (fullPath.startsWith('/recorded/streaming')) {
++            this.$nextTick(() => {
++                this.snackbarState.open({
++                    text: '再接続されました',
++                });
++            });
++            return;
++        }
+         this.$router.replace('/');
+         this.$nextTick(() => {
+             this.$router.replace(fullPath);

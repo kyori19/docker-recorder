@@ -66,3 +66,9 @@ RUN cd /opt/jlse &&\
   yarn --production --pure-lockfile &&\
   ln -s /opt/jlse/src/jlse.js /usr/local/bin/jlse &&\
   jlse --help
+
+COPY epgstation/*.patch /opt/epgstation/patches/
+
+# Patch EPGStation
+RUN find /opt/epgstation/patches -type f -name *.patch | xargs -n 1 patch -p1 -i &&\
+  npm run build
