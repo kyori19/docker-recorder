@@ -67,6 +67,8 @@ RUN cd /opt/jlse &&\
   ln -s /opt/jlse/src/jlse.js /usr/local/bin/jlse &&\
   jlse --help
 
+RUN apk add curl jq
+
 COPY epgstation/*.patch /opt/epgstation/patches/
 
 # Patch EPGStation
