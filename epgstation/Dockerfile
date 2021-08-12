@@ -72,5 +72,8 @@ RUN apk add curl jq
 COPY epgstation/*.patch /opt/epgstation/patches/
 
 # Patch EPGStation
-RUN find /opt/epgstation/patches -type f -name *.patch | xargs -n 1 patch -p1 -i &&\
+RUN apk add --no-cache patch &&\
+  find /opt/epgstation/patches -type f -name *.patch | xargs -n 1 patch -p1 -i &&\
+  apk del --no-cache patch &&\
+  rm -rf /opt/epgstation/patches &&\
   npm run build
